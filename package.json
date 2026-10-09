@@ -1,7 +1,7 @@
 {
   "name": "scrcpy-studio",
   "productName": "Scrcpy Studio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A beautiful, full-featured desktop GUI for scrcpy and adb",
   "main": "src/main/main.js",
   "author": "Augusto Migotto",
