@@ -41,6 +41,10 @@
       {
         "from": "resources/vcam",
         "to": "vcam"
+      },
+      {
+        "from": "build/link.ico",
+        "to": "link.ico"
       }
     ],
     "win": {
@@ -55,7 +59,8 @@
       "perMachine": false,
       "allowToChangeInstallationDirectory": true,
       "artifactName": "ScrcpyStudio-Setup-${version}.${ext}",
-      "shortcutName": "Scrcpy Studio"
+      "shortcutName": "Scrcpy Studio",
+      "include": "build/installer.nsh"
     },
     "publish": [
       {
