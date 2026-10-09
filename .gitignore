@@ -1,0 +1,11 @@
+node_modules/
+dist/
+captures/
+*.log
+native/scrcpy-src/
+native/build/
+native/caps.json
+release/
+native/softcam-src/
+native/build-vcam/
+.claude/

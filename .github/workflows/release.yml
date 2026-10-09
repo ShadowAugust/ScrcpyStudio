@@ -1,0 +1,33 @@
+# Builds the Windows installer + portable exe and publishes them as a GitHub
+# Release when a version tag is pushed (e.g. `npm version patch && git push --follow-tags`).
+# The app's updater reads these releases (latest.yml for the installer, the
+# portable exe for portable copies).
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # The native parts (Studio scrcpy server, virtual camera, bridge) are prebuilt
+      # in resources/ — rebuilding them needs the Android SDK and Visual Studio.
+      - name: Build and publish
+        run: npx electron-builder --win nsis portable --x64 --publish always
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
