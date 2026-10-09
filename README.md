@@ -1,20 +1,96 @@
-# Scrcpy Studio
+<p align="center">
+  <img src="docs/art/banner.png" alt="Scrcpy Studio" width="100%">
+</p>
 
-A polished, full-featured desktop GUI for [scrcpy](https://github.com/Genymobile/scrcpy) and adb.
-Mirror, record, control and manage your Android devices from one place.
+<p align="center">
+  <a href="https://github.com/ShadowAugust/ScrcpyStudio/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/ShadowAugust/ScrcpyStudio?style=for-the-badge&color=7c5cff&label=release"></a>
+  <a href="https://github.com/ShadowAugust/ScrcpyStudio/releases/latest"><img alt="Downloads" src="https://img.shields.io/github/downloads/ShadowAugust/ScrcpyStudio/total?style=for-the-badge&color=0ea5e9"></a>
+  <img alt="Windows 10/11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-10b981?style=for-the-badge&logo=windows11&logoColor=white">
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/github/license/ShadowAugust/ScrcpyStudio?style=for-the-badge&color=f59e0b"></a>
+</p>
 
-![icon](build/icon.png)
+<p align="center">
+  <a href="https://github.com/ShadowAugust/ScrcpyStudio/releases/latest/download/ScrcpyStudio-Setup.exe"><img src="docs/art/download.png" alt="Download for Windows" width="390"></a>
+  <a href="https://github.com/ShadowAugust/ScrcpyStudio/releases/latest/download/ScrcpyStudio-Portable.exe"><img src="docs/art/portable.png" alt="Portable exe" width="270"></a>
+</p>
 
-## Features
+<p align="center">
+  A polished desktop app for <a href="https://github.com/Genymobile/scrcpy">scrcpy</a> and adb: mirror and control your Android,<br>
+  use its camera like a pro webcam, and turn the phone into your PC's <b>webcam, microphone and speakers</b>.
+</p>
 
-**Phone Link (Windows): phone as webcam, microphone and speakers**
-- A small separate window with its own desktop shortcut (Phone Link → "Desktop shortcut", or run the app with `--link`). Also in the tray, the rail and Ctrl+K
-- Three independent switches, each its own stream, so the phone only works for what is on:
-  - **Webcam** → "Scrcpy Studio Camera" (optional NDI), live preview with lens switching (.5 / 1× / front), tap to focus, zoom, exposure, focus, white balance, torch, mirror, fill, stabilisation, 720p/1080p and a Pro section (ISO / shutter / anti-flicker). Settings are shared with Camera Studio
-  - **Mic** → a virtual cable microphone (e.g. "CABLE Output"), an NDI audio source, or a PC output for listening. Natural / Voice (noise + echo reduction) / Raw modes, level meter
-  - **Speakers** → plays Windows sound on the phone in stereo (48 kHz). With a virtual cable it becomes a separate "phone speakers" output, made the Windows default while on and restored after; without one the phone mirrors what a PC output plays. Phone volume slider
-- Virtual cables are detected automatically (VB-CABLE, CABLE A/B, Hi-Fi Cable, VoiceMeeter, Virtual Audio Cable). The mic gets the first one, the speakers the next one
-- Windows only lists microphones and speakers that have a driver, which is why a separate mic/speaker device needs a virtual cable driver; the webcam does not
+<p align="center">
+  <img src="docs/art/hero.png" alt="Camera Studio and Phone Link" width="100%">
+</p>
+
+## ✨ Highlights
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/phone-link.png" alt="Phone Link" align="right" width="190">
+      <h3>📱 Phone Link</h3>
+      One small window, three switches: your phone as <b>webcam</b>, <b>microphone</b> and <b>speakers</b> for Discord, Zoom, Teams, OBS, vMix and any Windows app.
+      Each part runs only while it is on, so the phone stays cool.
+      <br><br>
+      Live preview, lens switching, tap to focus, zoom, exposure, white balance, torch, plus its own desktop shortcut.
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/camera.png" alt="Camera Studio">
+      <h3>📸 Camera Studio</h3>
+      Pro-mode control of the phone camera while it streams: ISO, shutter, manual focus, Kelvin white balance, EV, zoom, lens switching, OIS/EIS, anti-flicker, looks, histogram.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/devices.png" alt="Home">
+      <h3>🏠 One-click everything</h3>
+      Live screen preview, battery and connection at a glance, one-click mirror, record, screen-off, desktop mode, audio and screenshots. USB or Wi-Fi (QR pairing).
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/mirror.png" alt="Mirroring profiles">
+      <h3>🎛️ Every scrcpy option</h3>
+      Built-in and custom profiles with an editor for every scrcpy 4.x option, live command preview, conflict checks and "detect from device".
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/control.png" alt="Control">
+      <h3>🕹️ Remote control</h3>
+      Keys, text, clipboard, quick-settings tiles, brightness, timeouts, animation speed, resolution and density overrides, reboot modes.
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/files.png" alt="Files">
+      <h3>🗂️ Files, apps & shell</h3>
+      Drag & drop file manager, app manager (launch, extract APK, uninstall…), adb shell, live logcat, device info and a media gallery.
+    </td>
+  </tr>
+</table>
+
+## 🚀 Get started
+
+1. **[Download the installer](https://github.com/ShadowAugust/ScrcpyStudio/releases/latest/download/ScrcpyStudio-Setup.exe)** and run it (installs for your user, no admin needed). It adds **Scrcpy Studio** and **Phone Link** shortcuts.
+2. Install [scrcpy](https://github.com/Genymobile/scrcpy/releases) (or `winget install Genymobile.scrcpy`): it is detected automatically.
+3. Enable **USB debugging** on your phone and plug it in, or pair it over Wi-Fi from the app.
+
+Prefer no install? Grab **[ScrcpyStudio-Portable.exe](https://github.com/ShadowAugust/ScrcpyStudio/releases/latest/download/ScrcpyStudio-Portable.exe)**.
+
+### 🔄 Updates
+
+The app checks for new releases at startup and suggests them (**Update now**, **What's new**, **Skip this version**). Check any time in Settings → Updates, the tray menu, or `Ctrl+K` → "Check for updates". The installer version updates itself in place; the portable exe swaps itself on restart.
+
+## 📱 Phone Link: webcam, mic & speakers
+
+| | What Windows gets | Notes |
+| --- | --- | --- |
+| 🎥 **Webcam** | **Scrcpy Studio Camera**, a regular webcam (+ optional NDI) | One-time install from the app (asks for admin) |
+| 🎙️ **Mic** | A microphone such as **CABLE Output**, or an NDI audio source | Natural / Voice (noise + echo reduction) / Raw |
+| 🔊 **Speakers** | Windows sound played on the phone, in stereo | With a virtual cable it becomes its own output, otherwise it mirrors your speakers |
+
+Windows only lists microphones and speakers that have a driver, so the mic and a separate "phone speakers" output use a free virtual audio cable such as [VB-CABLE](https://vb-audio.com/Cable/). Phone Link detects it automatically (VB-CABLE, CABLE A/B, Hi-Fi Cable, VoiceMeeter, Virtual Audio Cable).
+
+<details>
+<summary><b>All features</b></summary>
 
 **Virtual webcam + microphone (Windows)**
 - One click turns the phone into **"Scrcpy Studio Camera"**, a real webcam device for vMix, Discord, Zoom, Teams, OBS, Chrome/Edge and most Windows apps (DirectShow, 64- and 32-bit apps). It shows a "camera offline" card when the phone isn't streaming, so apps can always open it
@@ -61,34 +137,16 @@ How it works: Scrcpy Studio ships a patched build of the scrcpy server (`native/
 
 **App** — dark/light/system themes with accent colors, command palette (`Ctrl+K`), keyboard shortcuts, system tray, desktop notifications, settings export/import.
 
-## Download
+</details>
 
-Get the latest build from [Releases](https://github.com/ShadowAugust/ScrcpyStudio/releases/latest):
+## 🛠️ Build from source
 
-- **ScrcpyStudio-Setup-x.y.z.exe**: installs per user (no admin needed) and updates itself in place
-- **ScrcpyStudio-Portable.exe**: a single exe to run from anywhere; updates download the new exe and swap it on restart
-
-## Updates
-
-At startup the app checks GitHub Releases (can be turned off in Settings → Updates) and suggests a new version with its release notes: **Update now**, **What's new** or **Skip this version**. You can also check manually from Settings → Updates, the tray menu or Ctrl+K → "Check for updates". The Phone Link window shows a small banner too.
-
-## Releasing
-
-Bump the version and push the tag; the GitHub Actions workflow builds the installer and portable exe and publishes the release (with `latest.yml` for the updater):
-
-```bash
-npm version patch
-git push --follow-tags
-```
-
-The native parts in `resources/` (Studio scrcpy server, virtual camera DLLs, `studio-vcam.exe`) are committed prebuilt, so CI only needs Node. Rebuild them locally with `npm run build:server` / `npm run build:vcam` when you change them.
-
-## Requirements
+### Requirements
 
 - [scrcpy](https://github.com/Genymobile/scrcpy/releases) 2.x+ (4.x recommended). Auto-detected from PATH, winget, scoop, chocolatey, or set manually in Settings. The adb bundled with scrcpy is used by default.
 - Node.js 18+ (to run from source)
 
-## Run
+### Run
 
 ```bash
 npm install
@@ -101,9 +159,9 @@ Build a Windows installer + portable exe:
 npm run dist
 ```
 
-Output goes to `dist/` (NSIS installer and a portable `.exe`).
+Output goes to `dist/` (installer and portable `.exe`).
 
-## Shortcuts
+### Shortcuts
 
 | Action | Keys |
 | --- | --- |
@@ -115,7 +173,7 @@ Output goes to `dist/` (NSIS installer and a portable `.exe`).
 | Settings | `Ctrl+,` |
 | Refresh devices | `F5` |
 
-## Rebuilding the camera server
+### Rebuilding the camera server
 
 Needed only if you update scrcpy (the server must match the client version exactly). Requires git, JDK 17+ and the Android SDK (platform + build-tools):
 
@@ -123,7 +181,7 @@ Needed only if you update scrcpy (the server must match the client version exact
 SCRCPY_VERSION=4.1 npm run build:server
 ```
 
-## Rebuilding the virtual webcam
+### Rebuilding the virtual webcam
 
 Requires Visual Studio 2022 with "Desktop development with C++" (builds the softcam-based DirectShow camera for x64/x86 and the `studio-vcam.exe` bridge):
 
@@ -133,10 +191,25 @@ npm run build:vcam
 
 `node scripts/build-vcam.js --bridge` rebuilds only `studio-vcam.exe`. The phone-side speaker player (`com.genymobile.scrcpy.studio.Speaker`) is part of the Studio server jar (`npm run build:server`).
 
-## Development
+### Development
 
 - `src/main` — Electron main process (`adb.js`, `scrcpy.js`, `pairing.js`, `store.js`, `tools.js`, `preload.js`)
 - `src/renderer` — UI (vanilla ES modules, no build step). `js/options.js` is the declarative scrcpy option schema.
 - `npm run preview` serves the UI in a browser with a demo backend (`js/mock-api.js`).
 - `bash scripts/capture.sh out/` renders every view with demo data to PNGs.
 - `npm run icons` regenerates the icon subset and the app icon.
+
+### Releasing
+
+Bump the version and push the tag; GitHub Actions builds the installer and portable exe and publishes the release (with `latest.yml` for the updater):
+
+```bash
+npm version patch
+git push --follow-tags
+```
+
+The native parts in `resources/` (Studio scrcpy server, virtual camera DLLs, `studio-vcam.exe`) are committed prebuilt, so CI only needs Node. README artwork: `npm run art` (renders `docs/art/*.html`).
+
+## 📄 License
+
+MIT © Augusto Migotto. Bundles the scrcpy server (Apache-2.0, Genymobile), softcam (MIT) and Lucide icons (ISC).

@@ -20,7 +20,7 @@
     { serial: '192.168.1.42:5555', state: 'device', type: 'wifi', model: 'SM-X710', brand: 'samsung', manufacturer: 'samsung', marketName: 'Galaxy Tab S9', androidVersion: '14', sdk: 34, resolution: '2560x1600', physicalResolution: '2560x1600', density: 340, battery: { level: 23, charging: false }, characteristics: 'tablet' },
     { serial: 'ZY22H7KXLM', state: 'unauthorized', type: 'usb', model: null },
   ];
-  config.deviceAliases = { '192.168.1.42:5555': 'Work tablet' };
+  config.deviceAliases = { '192.168.1.42:5555': 'Work tablet', '38121FDJH00ABC': 'Galaxy S20 FE' };
   const sessions = [];
   let seq = 0;
 
@@ -91,16 +91,64 @@
     camera: (() => {
       const caps = [{"id":"0","facing":"back","level":3,"capabilities":[0,9,3,7,4,5,1,6,2],"iso":[50,3200],"exposure":[57508,146700000],"maxFrameDuration":149988525,"minFocus":10,"hyperfocal":4.5000005,"focusCalibration":1,"evRange":[-20,20],"evStep":0.1,"afModes":[0,1,2,3,4],"aeModes":[0,1,2,3],"awbModes":[1,2,3,4,5,6,7,8,0],"antibanding":[0,1,2,3],"effects":[0,1,2,4],"scenes":[0,1,2,3,4,5,6,7,8,9,10,12,13,14,15,18],"eis":[0,1],"ois":[0,1],"nr":[0,1,2,3,4],"edge":[1,2,0,3],"tonemap":[0,1,2],"maxRegionsAe":1,"maxRegionsAf":1,"flash":true,"sensorOrientation":90,"manualWb":true,"zoom":[1,8],"aperture":1.7999999523162842,"focal":5.400000095367432,"sensorSize":[7.257599830627441,5.44320011138916],"focal35":26,"active":[4032,3024],"fpsRanges":[[15,15],[7,24],[24,24],[7,30],[30,30]],"sizes":["4032x3024","4032x2268","4032x1816","3024x3024","1920x824","3840x2160","1920x1080","2400x1080","1920x864","1920x1440","1440x1080","1088x1088","1280x720","960x720","720x480","640x480","640x360","352x288","320x240","256x144","176x144"],"highSpeed":["1280x720@120","1280x720@120","1280x720@240","1280x720@240","1920x1080@120","1920x1080@120","1920x1080@240","1920x1080@240","1920x824@120","1920x824@120"]},{"id":"1","facing":"front","level":0,"capabilities":[0,9,3,4,5,6],"iso":[50,100800],"exposure":[99900,279360000],"maxFrameDuration":279569520,"minFocus":0,"hyperfocal":3.9313633,"focusCalibration":1,"evRange":[-20,20],"evStep":0.1,"afModes":[0],"aeModes":[0,1],"awbModes":[1,2,3,4,5,6,7,8,0],"antibanding":[0,1,2,3],"effects":[0,1,2,4],"scenes":[0,1,2,3,4,5,6,7,8,9,10,12,13,14,15,18],"eis":[0,1],"ois":[0],"nr":[0,1,2,3,4],"edge":[1,2,0,3],"tonemap":[0,1,2],"maxRegionsAe":1,"maxRegionsAf":0,"flash":false,"sensorOrientation":270,"manualWb":true,"zoom":[1,8],"aperture":2.200000047683716,"focal":3.7200000286102295,"sensorSize":[5.222400188446045,3.916800022125244],"focal35":25,"active":[3264,2448],"fpsRanges":[[15,15],[7,24],[24,24],[7,30],[30,30]],"sizes":["3264x2448","3264x1836","3264x1468","2448x2448","1920x824","1920x1080","2400x1080","1920x864","1920x1440","1440x1080","1088x1088","1280x720","960x720","720x480","640x480","640x360","352x288","320x240","256x144","176x144"],"highSpeed":["1280x720@120","1280x720@120","1920x1080@120","1920x1080@120","1920x824@120","1920x824@120"]},{"id":"2","facing":"back","level":0,"capabilities":[0,3,4,5,1,6,7],"iso":[50,2400],"exposure":[40988,671434675],"maxFrameDuration":671537145,"minFocus":0,"hyperfocal":0.6143669,"focusCalibration":1,"evRange":[-20,20],"evStep":0.1,"afModes":[0],"aeModes":[0,1,2,3],"awbModes":[1,2,3,4,5,6,7,8,0],"antibanding":[0,1,2,3],"effects":[0,1,2,4],"scenes":[0,1,2,3,4,5,6,7,8,9,10,12,13,14,15,18],"eis":[0,1],"ois":[0],"nr":[0,1,2,3,4],"edge":[1,2,0,3],"tonemap":[0,1,2],"maxRegionsAe":1,"maxRegionsAf":0,"flash":true,"sensorOrientation":90,"manualWb":true,"zoom":[1,8],"aperture":2.200000047683716,"focal":1.7400000095367432,"sensorSize":[4.480000019073486,3.359999895095825],"focal35":13,"active":[4000,3000],"fpsRanges":[[15,15],[24,24],[7,30],[30,30]],"sizes":["4000x3000","4000x2256","4000x1800","2992x2992","1920x824","3840x2160","1920x1080","2400x1080","1920x864","1920x1440","1440x1080","1088x1088","1280x720","960x720","720x480","640x480","640x360","352x288","320x240","256x144","176x144"],"highSpeed":[]},{"id":"3","facing":"front","level":0,"capabilities":[0,9,3,4,5,6],"iso":[50,3200],"exposure":[99900,279360000],"maxFrameDuration":279569520,"minFocus":0,"hyperfocal":3.9313633,"focusCalibration":1,"evRange":[-20,20],"evStep":0.1,"afModes":[0],"aeModes":[0,1],"awbModes":[1,2,3,4,5,6,7,8,0],"antibanding":[0,1,2,3],"effects":[0,1,2,4],"scenes":[0,1,2,3,4,5,6,7,8,9,10,12,13,14,15,18],"eis":[0,1],"ois":[0],"nr":[0,1,2,3,4],"edge":[1,2,0,3],"tonemap":[0,1,2],"maxRegionsAe":1,"maxRegionsAf":0,"flash":false,"sensorOrientation":270,"manualWb":true,"zoom":[1,8],"aperture":2.200000047683716,"focal":3.7200000286102295,"sensorSize":[4.223999977111816,3.1679999828338623],"focal35":30,"active":[2640,1980],"fpsRanges":[[15,15],[7,24],[24,24],[7,30],[30,30]],"sizes":["2640x1980","2640x1488","2640x1188","1968x1968","1920x824","1920x1080","2400x1080","1920x864","1920x1440","1440x1080","1088x1088","1280x720","960x720","720x480","640x480","640x360","352x288","320x240","256x144","176x144"],"highSpeed":["1280x720@120","1280x720@120","1920x1080@120","1920x1080@120","1920x824@120","1920x824@120"]}];
       let timer = null, conf = {}, t = 0;
+      // Demo webcam scene: warm room, window light, bokeh, a person at a desk.
+      let bokeh = null;
       const frame = () => {
-        const c = document.createElement('canvas'); c.width = 640; c.height = 360;
+        const W = 960, H = 540;
+        const c = document.createElement('canvas'); c.width = W; c.height = H;
         const g = c.getContext('2d');
         const k = (conf.awb === 'manual' ? (conf.kelvin - 5200) / 5000 : 0);
-        const gr = g.createLinearGradient(0, 0, 640, 360);
-        gr.addColorStop(0, `hsl(${30 - k * 60} 45% ${conf.ae === 'manual' ? Math.min(70, conf.iso / 40) : 38}%)`); gr.addColorStop(1, `hsl(${220 - k * 40} 40% 16%)`);
-        g.fillStyle = gr; g.fillRect(0, 0, 640, 360);
-        g.fillStyle = 'rgba(255,220,160,.8)'; g.beginPath(); g.arc(470 + Math.sin(t / 9) * 12, 120, 46, 0, 7); g.fill();
-        g.fillStyle = '#1b1c26'; g.fillRect(90, 210, 300, 150); g.fillStyle = '#2d3040'; g.fillRect(130, 150, 110, 70);
-        g.filter = 'none'; return c.toDataURL('image/jpeg', .7);
+        const ev = (conf.ae === 'manual' ? Math.log2((conf.iso || 200) / 200) * 0.25 : 0) + (conf.ev || 0) * 0.01;
+        bokeh ||= Array.from({ length: 26 }, (_, i) => ({ x: Math.random() * W, y: Math.random() * H * 0.65, r: 12 + Math.random() * 34, h: [38, 28, 200, 330][i % 4], a: 0.12 + Math.random() * 0.25 }));
+        // wall
+        const wall = g.createLinearGradient(0, 0, W, H);
+        wall.addColorStop(0, `hsl(${28 - k * 50} 38% ${30 + ev * 30}%)`);
+        wall.addColorStop(0.55, `hsl(${22 - k * 40} 30% ${20 + ev * 25}%)`);
+        wall.addColorStop(1, `hsl(${230 - k * 20} 30% ${10 + ev * 15}%)`);
+        g.fillStyle = wall; g.fillRect(0, 0, W, H);
+        // window light on the right
+        const win = g.createRadialGradient(W * 0.86, H * 0.18, 10, W * 0.86, H * 0.18, W * 0.55);
+        win.addColorStop(0, 'rgba(255,236,200,.85)'); win.addColorStop(0.3, 'rgba(255,210,150,.28)'); win.addColorStop(1, 'rgba(255,200,140,0)');
+        g.fillStyle = win; g.fillRect(0, 0, W, H);
+        // shelf + plant, out of focus
+        g.filter = 'blur(7px)';
+        g.fillStyle = 'rgba(30,20,18,.55)'; g.fillRect(W * 0.04, H * 0.30, W * 0.26, 12);
+        g.fillStyle = 'rgba(60,110,70,.7)';
+        for (let i = 0; i < 9; i++) { g.beginPath(); g.ellipse(W * 0.12 + Math.cos(i) * 40, H * 0.22 + Math.sin(i * 2) * 18, 26, 12, i, 0, 7); g.fill(); }
+        g.fillStyle = 'rgba(120,70,50,.8)'; g.fillRect(W * 0.1, H * 0.25, 46, 40);
+        // bokeh lights
+        for (const b of bokeh) {
+          const grd = g.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
+          grd.addColorStop(0, `hsla(${b.h} 90% 75% / ${b.a})`); grd.addColorStop(1, `hsla(${b.h} 90% 70% / 0)`);
+          g.fillStyle = grd; g.beginPath(); g.arc(b.x + Math.sin(t / 15 + b.r) * 3, b.y, b.r, 0, 7); g.fill();
+        }
+        g.filter = 'none';
+        // person (head + shoulders) with a rim light from the window
+        const sway = Math.sin(t / 11) * 6;
+        const px = W * 0.47 + sway, py = H * 0.47;
+        const body = g.createLinearGradient(px - 200, 0, px + 220, 0);
+        body.addColorStop(0, '#1d2333'); body.addColorStop(0.75, '#2a3247'); body.addColorStop(1, '#6b5a4c');
+        g.fillStyle = body;
+        g.beginPath(); g.moveTo(px - 230, H); g.bezierCurveTo(px - 220, py + 120, px - 120, py + 92, px, py + 90); g.bezierCurveTo(px + 120, py + 92, px + 220, py + 120, px + 236, H); g.closePath(); g.fill();
+        // backlit head (silhouette) with a warm rim light from the window
+        g.fillStyle = '#1a1820'; g.fillRect(px - 30, py + 40, 60, 60);
+        const face = g.createRadialGradient(px + 40, py - 10, 5, px, py, 100);
+        face.addColorStop(0, `hsl(${22 - k * 10} 30% ${30 + ev * 15}%)`); face.addColorStop(0.55, '#221d26'); face.addColorStop(1, '#141118');
+        g.fillStyle = face; g.beginPath(); g.ellipse(px, py - 4, 74, 94, 0, 0, 7); g.fill();
+        g.save(); g.filter = 'blur(3px)'; g.strokeStyle = 'rgba(255,205,150,.85)'; g.lineWidth = 5;
+        g.beginPath(); g.ellipse(px, py - 4, 74, 94, 0, -1.25, 0.75); g.stroke();
+        g.beginPath(); g.moveTo(px + 34, py + 92); g.bezierCurveTo(px + 120, py + 94, px + 210, py + 122, px + 232, H); g.stroke();
+        g.restore();
+        // desk + mug
+        const desk = g.createLinearGradient(0, H * 0.86, 0, H);
+        desk.addColorStop(0, '#3b2a22'); desk.addColorStop(1, '#1c1310');
+        g.fillStyle = desk; g.fillRect(0, H * 0.88, W, H * 0.12);
+        g.fillStyle = '#e9e4dc'; g.fillRect(W * 0.8, H * 0.78, 54, 64); g.strokeStyle = '#e9e4dc'; g.lineWidth = 8; g.beginPath(); g.arc(W * 0.8 + 62, H * 0.84, 16, -1.4, 1.4); g.stroke();
+        // vignette
+        const vig = g.createRadialGradient(W / 2, H / 2, H * 0.3, W / 2, H / 2, W * 0.7);
+        vig.addColorStop(0, 'rgba(0,0,0,0)'); vig.addColorStop(1, 'rgba(0,0,0,.45)');
+        g.fillStyle = vig; g.fillRect(0, 0, W, H);
+        return c.toDataURL('image/jpeg', .82);
       };
       return {
         info: () => Promise.resolve({ server: 'x', serverVersion: '4.1', scrcpyVersion: '4.1' }),

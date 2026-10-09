@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  html, body { margin: 0; width: 1600px; height: 560px; overflow: hidden; }
+  body { background: #07080d; font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif; color: #eef0fa; position: relative; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .75; }
+  .b1 { width: 620px; height: 620px; left: -160px; top: -260px; background: #5b3bd6; }
+  .b2 { width: 560px; height: 560px; right: -120px; top: -180px; background: #0c6fa0; }
+  .b3 { width: 520px; height: 520px; left: 640px; bottom: -380px; background: #0e8a62; opacity: .55; }
+  .b4 { width: 380px; height: 380px; right: 380px; bottom: -260px; background: #c2416d; opacity: .35; }
+  .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(70% 90% at 50% 50%, #000 30%, transparent 85%); }
+  .wrap { position: absolute; inset: 0; display: flex; align-items: center; gap: 56px; padding: 0 110px; }
+  .icon { width: 210px; height: 210px; border-radius: 52px; box-shadow: 0 40px 90px -30px rgba(124,92,255,.9), 0 0 0 1px rgba(255,255,255,.12) inset; flex: none; }
+  h1 { margin: 0; font-size: 112px; line-height: 1; font-weight: 700; letter-spacing: -3px;
+    background: linear-gradient(100deg, #ffffff 30%, #c9b8ff 60%, #7dd3fc 95%); -webkit-background-clip: text; color: transparent; }
+  p { margin: 18px 0 30px; font-size: 34px; font-weight: 400; color: #b9bdd6; letter-spacing: -.3px; }
+  p b { color: #fff; font-weight: 600; }
+  .pills { display: flex; flex-wrap: wrap; gap: 12px; max-width: 1040px; }
+  .pill { display: inline-flex; align-items: center; gap: 10px; height: 46px; padding: 0 20px; border-radius: 99px; font: 600 20px "Segoe UI", sans-serif;
+    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); color: #e8e9f6; backdrop-filter: blur(8px); }
+  .pill i { width: 10px; height: 10px; border-radius: 50%; }
+</style></head><body>
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
+  <div class="grid"></div>
+  <div class="wrap">
+    <img class="icon" src="../../build/icon.png">
+    <div>
+      <h1>Scrcpy Studio</h1>
+      <p>Your Android phone, <b>beautifully on Windows</b>.</p>
+      <div class="pills">
+        <span class="pill"><i style="background:#7c5cff"></i>Mirror &amp; control</span>
+        <span class="pill"><i style="background:#ff6b6b"></i>Pro camera</span>
+        <span class="pill"><i style="background:#a78bfa"></i>Virtual webcam</span>
+        <span class="pill"><i style="background:#10b981"></i>Phone mic</span>
+        <span class="pill"><i style="background:#0ea5e9"></i>Phone speakers</span>
+        <span class="pill"><i style="background:#fbbf24"></i>Files, apps &amp; shell</span>
+      </div>
+    </div>
+  </div>
+</body></html>

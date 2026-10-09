@@ -13,7 +13,8 @@
     "build:vcam": "node scripts/build-vcam.js",
     "preview": "python -m http.server 5178 -d src/renderer",
     "dist": "electron-builder --win nsis portable --x64",
-    "release": "electron-builder --win nsis portable --x64 --publish always"
+    "release": "electron-builder --win nsis portable --x64 --publish always",
+    "art": "electron scripts/render-art.js"
   },
   "build": {
     "appId": "com.scrcpystudio.app",
@@ -58,7 +59,7 @@
       "oneClick": false,
       "perMachine": false,
       "allowToChangeInstallationDirectory": true,
-      "artifactName": "ScrcpyStudio-Setup-${version}.${ext}",
+      "artifactName": "ScrcpyStudio-Setup.${ext}",
       "shortcutName": "Scrcpy Studio",
       "include": "build/installer.nsh"
     },
