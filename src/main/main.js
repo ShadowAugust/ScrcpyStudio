@@ -539,7 +539,7 @@ app.whenReady().then(async () => {
   if (wantsLink(process.argv)) createLinkWindow();
   else createWindow();
   try { buildTray(); } catch (e) { console.error('tray failed', e); }
-  if (!CAPTURE) setTimeout(() => updater.checkOnStartup(), 6000);
+  if (!CAPTURE || process.env.SSTUDIO_UPDATE_DEV) setTimeout(() => updater.checkOnStartup(), CAPTURE ? 1500 : 6000);
   adb.startTracking(store.get().settings.pollInterval);
 
   // Reconnect remembered wireless devices in the background.

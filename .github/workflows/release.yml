@@ -7,7 +7,6 @@ name: Release
 on:
   push:
     tags: ['v*']
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,18 +15,27 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
 
       - run: npm ci
 
+      # Release notes from the commits since the previous tag (shown by the in-app updater).
+      - name: Create release
+        shell: bash
+        run: gh release create "$GITHUB_REF_NAME" --title "Scrcpy Studio ${GITHUB_REF_NAME#v}" --generate-notes || true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       # The native parts (Studio scrcpy server, virtual camera, bridge) are prebuilt
-      # in resources/ — rebuilding them needs the Android SDK and Visual Studio.
-      - name: Build and publish
+      # in resources/; rebuilding them needs the Android SDK and Visual Studio.
+      - name: Build and upload
         run: npx electron-builder --win nsis portable --x64 --publish always
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
